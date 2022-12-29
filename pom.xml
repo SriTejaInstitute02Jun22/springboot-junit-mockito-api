@@ -9,9 +9,9 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.sriteja</groupId>
-	<artifactId>springboot-junit-mockito-api</artifactId>
+	<artifactId>springboot-junit-mockito-oracledb-api</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>springboot-junit-mockito-api</name>
+	<name>springboot-junit-mockito-oracledb-api</name>
 	<description>Spring Boot Junit Mockito Application</description>
 	<properties>
 		<java.version>11</java.version>
