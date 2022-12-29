@@ -1,0 +1,7 @@
+--how to create the users/account/schema in database?
+create user <user_name> identified by <password>;	--syntax
+create user sriteja identified by sriteja;			--example
+
+--how to give the permissions to that users?  
+grant connect, resource to <user_name>;				--syntax
+grant connect, resource to sriteja;					--example
