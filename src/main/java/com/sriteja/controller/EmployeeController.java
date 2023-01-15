@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.sriteja.bean.Employee;
 import com.sriteja.bean.Response;
+import com.sriteja.model.Employee;
 import com.sriteja.service.IEmployeeService;
 
 @RestController
@@ -21,10 +21,10 @@ public class EmployeeController {
 	private IEmployeeService employeeService;
 
 	@PostMapping("/addEmployee")
-	public Response addEmployee(@RequestBody Employee employee) {
+	public void addEmployee(@RequestBody Employee employee) {
 		System.out.println("============================");
 		employeeService.save(employee);
-		return new Response(employee.getId() + " inserted", Boolean.TRUE);
+		
 	}
 
 	@GetMapping("/getEmployees")

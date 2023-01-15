@@ -13,7 +13,9 @@ import javax.persistence.Table;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import lombok.AllArgsConstructor;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 import lombok.ToString;
 
 
@@ -22,6 +24,8 @@ import lombok.ToString;
 @AllArgsConstructor
 @ToString
 @NoArgsConstructor
+@Setter
+@Getter
 public class Book {
 
     @JsonProperty(value = "book_id",required = false)

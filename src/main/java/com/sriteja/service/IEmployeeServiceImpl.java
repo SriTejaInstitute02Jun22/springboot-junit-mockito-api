@@ -3,21 +3,24 @@ package com.sriteja.service;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.sriteja.bean.Employee;
+import com.sriteja.model.Employee;
+import com.sriteja.repository.EmployeeRepository;
+
+
 
 @Service
 public class IEmployeeServiceImpl implements IEmployeeService{
 
+	@Autowired
+	private EmployeeRepository employeeRepository;
+	
 	@Override
-	public Employee save(Employee employee) {
-		
-		Employee emp = new Employee();
-		emp.setId(123);
-		emp.setDept("IT");
-		emp.setName("Ramesh");
-		return emp;
+	public void save(Employee employee) {
+		employeeRepository.save(employee);
+	
 	}
 
 	@Override
@@ -25,17 +28,17 @@ public class IEmployeeServiceImpl implements IEmployeeService{
 
 		Employee emp1 = new Employee();
 		emp1.setId(456);
-		emp1.setDept("IT");
+		emp1.setDepartment("IT");
 		emp1.setName("Janaki");
 		
 		Employee emp2 = new Employee();
 		emp2.setId(565);
-		emp2.setDept("Admin");
+		emp2.setDepartment("Admin");
 		emp2.setName("Manasa");
 		
 		Employee emp3 = new Employee();
 		emp3.setId(123);
-		emp3.setDept("IT");
+		emp3.setDepartment("IT");
 		emp3.setName("Ramesh");
 		
 		List<Employee> listOfEmployee = new ArrayList<Employee>();
@@ -44,5 +47,7 @@ public class IEmployeeServiceImpl implements IEmployeeService{
 		listOfEmployee.add(emp3);
 		return listOfEmployee;
 	}
+	
+	
 
 }
